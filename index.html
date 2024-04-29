@@ -1,176 +1,219 @@
 <!DOCTYPE html>  
 <html lang="en">  
 <head>  
-<meta charset="UTF-8">  
-<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-<title>shopping cart</title>  
-<style>  
-#remove{
-    background-color: #2f2e31;
-    color: white;
-    border: none;  
-  border-radius: 4px; 
-  padding: 8px 20px;  
-}
-#total{
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>RTO Training Resources</title>  
+    <link rel="stylesheet" href="styles.css">  
+    <script src="script.js" defer></script>  
+</head>  
+<style>
+    body{
+       
+    background: linear-gradient(to bottom, rgb(163, 119, 119), rgb(95, 95, 153));  
+     
+    margin: 0;  
+    padding: 0;  
+    align-items: center; 
+    justify-content: center;
+    }
+    footer {  
+    background-color: #333;  
+    color: #fff;  
+    padding: 20px;  
+    text-align: center;  
+    font-size: 14px;  
+  }  
+  footer a {  
+    color: #fff;  
+    text-decoration: none;  
+    margin: 0 5px;  
+  }  
+  footer a:hover {  
+    color: #ccc;  
+  }  
+  .footer-links {  
+    margin-bottom: 10px;  
+  }  
+  .footer-links a {  
+    display: inline-block;  
+    margin: 0 5px;  
+  }  
+  .copyright {  
+    margin-top: 10px;  
+  }  
+    body {  
     font-family: Arial, sans-serif;  
-  font-size: 30px;  
-  color: #0b0b0b;  
-}
-#totalPrice{
-    font-family: Arial, sans-serif;  
-  font-size: 30px;  
-  color: #0b0b0b;  
-}
-
-.buttons{
-    background-color: #3a13ea;
-    color: white;
-    border: none;  
-  border-radius: 4px; 
-  padding: 12px 28px;  
-}
-.line{
-    width: 1300px;  
-        height: 5px; 
-        background-color: #070707; 
-}
-.clear{
-    background-color: #3a13ea;
-    color: white;
-    border: none;  
-  border-radius: 4px; 
-  padding: 12px 28px; 
-}
-.product {  
-  display: inline-block;  
-  vertical-align: top;   
-  margin-right: 10px; 
+    margin: 0;  
+    padding: 0;  
 }  
   
-
-.product:last-child {  
-  margin-right: 0;  
+header {  
+    background-color: #333;  
+    color: #fff;  
+    padding: 10px;  
+    text-align: center;  
+}  
+  
+nav ul {  
+    list-style-type: none;  
+    margin: 0;  
+    padding: 0;  
+    overflow: hidden;  
+    background-color: #f3f3f3;  
+}  
+  
+nav li {  
+    float: left;  
+}  
+  
+nav li a {  
+    display: block;  
+    color: #666;  
+    text-align: center;  
+    padding: 14px 16px;  
+    text-decoration: none;  
+}  
+  
+nav li a:hover {  
+    background-color: #ddd;  
+}  
+  
+section {  
+    padding: 20px;  
+}  
+img{
+    width: 200px;
+    height: 200px;
 }
-    .product {  
-        margin-bottom: 20px;  
-        width: 300px;  
-        height: 220px;  
-        background-color: #f2f2f2; 
-    } 
+/* Add more CSS styles here as needed */
+@keyframes fadeIn {  
+  0% {opacity: 0;}  
+  100% {opacity: 1;}  
+}  
+  
+.animated-image {  
+    
+    width: 1000px;
+    height: 500px;
+  animation-name: fadeIn;  
+  animation-duration: 2s; 
+  animation-fill-mode: forwards;   
+}
+p{
+    font-family: 'Arial', sans-serif; 
+    font-size: 30px;  
+    color: #333;  
+    font-weight: bold;  
+    font-style: italic;  
+    text-align: center; 
+    animation-name: textColorChange;  
+    
+  
+  animation-duration: 2s;  
+    
+    
+  animation-iteration-count: infinite;  
     
    
+  animation-direction: alternate;  
     
-    .cart-item {  
-        margin-bottom: 10px; 
-       
-    }  
-</style>  
-</head>  
+   
+  animation-timing-function: ease-in-out;   
+}
+@keyframes textColorChange {  
+  0% { color: red; }  
+  50% { color: blue; }  
+  100% { color: green; } }
+#shop{
+    width: 50px;
+    height: 50px;
+}
+#shopping{
+    position: absolute;  
+  top: 98px;  
+  right: 10px;  
+}
+@keyframes blink {  
+  0% { opacity: 1; }  
+  50% { opacity: 0; }  
+  100% { opacity: 1; }  
+}  
+  
+.blinking-image {  
+  animation: blink 1s linear infinite;  
+}
+</style>
 <body>  
-  <center>
-<h1>Resource Kits</h1>  
-<div id="products">  
-    <div class="product">  
-        <h2>product 1</h2>  
-        <p>Price: $10</p>  
-        <input type="number" id="product1-quantity" value="0" min="0">  <br><br>
-        <button class="buttons" onclick="addToCart608('product1', 10)">Add to cart</button>  
-    </div>  
-    <div class="product">  
-        <h2>product 2</h2>  
-        <p>Price: $20</p>  
-        <input type="number" id="product2-quantity" value="0" min="0">  <br><br>
-        <button class="buttons" onclick="addToCart608('product2', 20)">Add to cart</button>  
-    </div>  
-    <div class="product">  
-        <h2>product 3</h2>  
-        <p>Price: $30</p> 
-        <input type="number" id="product3-quantity" value="0" min="0">  <br><br>
-        <button class="buttons" onclick="addToCart608('product3', 30)">Add to cart</button>  
-    </div>  
-    <div class="product">  
-        <h2>product 4</h2>  
-        <p>Price: $40</p>  
-        <input type="number" id="product4-quantity" value="0" min="0">  <br><br>
-        <button class="buttons" onclick="addToCart608('product4', 40)">Add to cart</button>  
-    </div>  
-    <div class="product">  
-        <h2>product 5</h2>  
-        <p>Price: $50</p>  
-        <input type="number" id="product5-quantity" value="0" min="0">  <br><br>
-        <button class="buttons" onclick="addToCart608('product5', 50)">Add to cart</button>  
-    </div>  
-    <div class="product">  
-        <h2>product 6</h2>  
-        <p>Price: $60</p>  
-        <input type="number" id="product6-quantity" value="0" min="0">  <br><br>
-        <button class="buttons" onclick="addToCart608('product6', 60)">Add to cart</button>  
-    </div>  
+    <header>  
+        <h1>Electronic information training school</h1>  
+    </header>  
+    <div id="shopping">
+    <a href="22.html">  
+        <img id="shop"src="11.png" >  
+    </a>
 </div>  
- <div class="line">
+    <nav>  
+        <ul>  
+            <li><a href="index.html">Home</a></li>  
+            <li><a href="aboutus.html">About Us</a></li>  
+            <li><a href="course.html">Courseware</a></li>  
+            <li><a href="zc.html">enquire</a></li>  
+            <li><a href="showcase.html">showcase</a></li>
+        </ul>  
+    </nav>  
+    <div style="text-align: center;"> 
+    <img class="blinking-image" src="logo.jpg" >  <p>Improve IT skills</p></div>
+    <div style="text-align: center;"> 
+    <img class="animated-image" src="123.png"><br><br><br>
+    <p>Enhance competitiveness in the workplace</p>
+    <img class="animated-image" src="sss.jpg">
+    <p>Log on to our website to learn the latest IT courses</p>
+    <img class="animated-image" src="kkk.png">
+    </div>
+    <main>  
+        <section id="home">  
+            <!-- Home content here -->  
+        </section>  
+        <section id="about">  
+            <!-- About content here -->  
+        </section>  
+        <section id="courses">  
+            <!-- Courseware content here -->  
+        </section>  
+        <section id="projects">  
+            <!-- Project content here -->  
+        </section>  
+    </main>  
+    <script>
+        // This is a placeholder for your JavaScript code.  
+// You'll need to write functions to handle form validation, shopping cart functionality, etc.  
+  
+// Example: Function to handle form submission  
+function handleFormSubmission608(event) {  
+    event.preventDefault(); // Prevent the form from submitting normally  
+    // Your code to validate the form and process the data here  
+    console.log('Form submitted!');  
+}  
+  
+// Attach the function to the form's submit event  
+document.querySelector('#registration-form').addEventListener('submit', handleFormSubmission608);
 
- </div>
-<h1>Shopping cart</h1>  
-<div id="cart">  
-    <div id="cart-items"></div>  
-    <p id="total">total Price: $<span id="totalPrice">0</span></p>  
-</div>  
-</center> 
-<button class="clear" onclick="clearCart608()">clear Cart</button>
-<script>  
-let cart = [];  
-  
-function addToCart608(productName, price) {  
-    const quantity = document.getElementById(`${productName}-quantity`).value;  
-    if (quantity > 0) {  
-        cart.push({ name: productName, price: price, quantity: quantity });  
-        displayCart608();  
-        calculateTotalPrice608();  
-    } else {  
-        alert('error');  
-    }  
-}  
-  
-function displayCart608() {  
-    const cartItemsElement = document.getElementById('cart-items');  
-    cartItemsElement.innerHTML = '';  
-    cart.forEach(item => {  
-        const cartItemElement = document.createElement('div');  
-        cartItemElement.classList.add('cart-item');  
-        cartItemElement.innerHTML = `  
-            <h3>${item.name}</h3>  
-            <p>unit price: ${item.price}</p>  
-            <p>quantity: ${item.quantity}</p>  
-            <p>Price: ${item.price * item.quantity}</p>  
-            <button id="remove" onclick="removeFromCart608('${item.name}')">Remove</button>  
-        `;  
-        cartItemsElement.appendChild(cartItemElement);  
-    });  
-}  
-  
-function removeFromCart608(productName) {  
-    cart = cart.filter(item => item.name !== productName);  
-    displayCart608();  
-    calculateTotalPrice608();  
-}  
-function clearCart608() {  
-    cart = [];  
-    displayCart608();   
-    document.getElementById('totalPrice').textContent = '0';  
-}  
-  
-function calculateTotalPrice608() {  
-    let total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);  
-    document.getElementById('totalPrice').textContent = total.toFixed(2);  
-}  
-  
-  
-window.onload = function() {  
-    displayCart608();  
-    calculateTotalPrice608(); 
-};
-</script>  
-  
+    </script>
+    <footer>  
+        <div class="footer-links">  
+          <a href="tel:+1234567890"><i class="fas fa-phone"></i> +123 456 7890</a>  
+          <a href="mailto:info@eitschool.com"><i class="fas fa-envelope"></i> info@eitschool.com</a>  
+          <a href="https://www.facebook.com/eitschool" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>  
+          <a href="https://www.twitter.com/eitschool" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a>  
+          <a href="https://www.instagram.com/eitschool" target="_blank"><i class="fab fa-instagram-square"></i> Instagram</a>  
+        </div>  
+        <div class="copyright">  
+          <h9>&copy; 2024 Electronic Information Training School. All rights reserved.</p>  
+          <h9><a href="sitemap.xml">Site Map</a> | <a href="privacy.html">Privacy Policy</a></p>  
+        </div>  
+      </footer> 
+    
 </body>  
 </html>
+
