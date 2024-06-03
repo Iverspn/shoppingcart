@@ -71,5 +71,12 @@ button:hover {
     margin-top: 10px;  
   }  
 #loginpage{
-     text-align: center;  }
+     text-align: center; 
+ width: 100%;  
+    padding: 10px;  
+    background-color: #4CAF50;  
+    color: #fff;  
+    border: none;  
+    border-radius: 5px;  
+    cursor: pointer;  }
 #pgp{text-align: center; }
