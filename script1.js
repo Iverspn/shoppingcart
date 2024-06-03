@@ -18,7 +18,7 @@ function checkCredentials() {
     // If the entered username matches the username cookie  
     if (usernameInput === usernameCookie) {  
          
-        window.location.href = "shopping.html";  
+        window.location.href = "22.html";  
     } else {  
         alert("Invalid username or password.");  
     }  
