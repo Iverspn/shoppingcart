@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">  
 <title>shopping cart</title>
 <link rel="stylesheet" href="style.css"> 
-<script src="script.js">  </script>
-
 <nav>  
     <ul>  
         <li><a href="index.html">Home</a></li>  
@@ -85,6 +83,61 @@
 <button id="calculate-total-price-button">Checkout</button>  
 <P id="totalPrice"></P>
 </center>
+    <script>
+        let cart = [];  
+  
+function addToCart608(courseName, price) {  
+    const quantity = document.getElementById(`${courseName}-quantity`).value;  
+    if (quantity > 0) {  
+        cart.push({ name: courseName, price: price, quantity: quantity });  
+        displayCart608();  
+         
+    } else {  
+        alert('error');  
+    }  
+}  
+  
+function displayCart608() {  
+    const cartItemsElement = document.getElementById('cart-items');  
+    cartItemsElement.innerHTML = '';  
+    cart.forEach(item => {  
+        const cartItemElement = document.createElement('div');  
+        cartItemElement.classList.add('cart-item');  
+        cartItemElement.innerHTML = `  
+            <h3>${item.name}</h3>  
+            <p>unit price: ${item.price}</p>  
+            <p>quantity: ${item.quantity}</p>  
+            <p>Price: ${item.price * item.quantity}</p>  
+            <button id="remove" onclick="removeFromCart608('${item.name}')">Remove</button>  
+        `;  
+        cartItemsElement.appendChild(cartItemElement);  
+    });  
+}  
+  
+function removeFromCart608(courseName) {  
+    cart = cart.filter(item => item.name !== courseName);  
+    displayCart608();  
+    calculateTotalPrice608();  
+}  
+function clearCart608() {  
+    cart = [];  
+    displayCart608();   
+    document.getElementById('totalPrice').textContent = '0';  
+}  
+  
+function calculateTotalPrice608() {  
+    let total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);  
+    document.getElementById('totalPrice').textContent = total.toFixed(2);  
+}  
+document.getElementById('calculate-total-price-button').addEventListener('click', calculateTotalPrice608);
+
+  
+
+window.onload = function() {  
+    displayCart608();  
+   
+};
+    </script>
 <footer>  
     <div class="footer-links">  
       <a href="tel:+1234567890"><i class="fas fa-phone"></i> +123 456 7890</a>  
