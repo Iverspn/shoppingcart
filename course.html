@@ -7,117 +7,17 @@
     <link rel="stylesheet" href="styles.css">  
     <script src="script.js" defer></script>  
 </head>  
-<style>
-    body {  
-    font-family: Arial, sans-serif;  
-    margin: 0;  
-    padding: 0;  
-}  
-  
-header {  
-    background-color: #333;  
-    color: #fff;  
-    padding: 10px;  
-    text-align: center;  
-}  
-  
-nav ul {  
-    list-style-type: none;  
-    margin: 0;  
-    padding: 0;  
-    overflow: hidden;  
-    background-color: #f3f3f3;  
-}  
-  
-nav li {  
-    float: left;  
-}  
-  
-nav li a {  
-    display: block;  
-    color: #666;  
-    text-align: center;  
-    padding: 14px 16px;  
-    text-decoration: none;  
-}  
-  
-nav li a:hover {  
-    background-color: #ddd;  
-}  
-  
-section {  
-    padding: 20px;  
-}  
-  
-/* Add more CSS styles here as needed */
-footer {  
-    background-color: #333;  
-    color: #fff;  
-    padding: 20px;  
-    text-align: center;  
-    font-size: 14px;  
-  }  
-  footer a {  
-    color: #fff;  
-    text-decoration: none;  
-    margin: 0 5px;  
-  }  
-  footer a:hover {  
-    color: #ccc;  
-  }  
-  .footer-links {  
-    margin-bottom: 10px;  
-  }  
-  .footer-links a {  
-    display: inline-block;  
-    margin: 0 5px;  
-  }  
-  .copyright {  
-    margin-top: 10px;  
-  }  
-  #shop{
-    width: 250px;
-    height: 250px;}
-    #shopping{
-    position: absolute;  
-  top:1058px;  
-  right: 250px;  }
-  .product {  
-  display: inline-block;  
-  vertical-align: top;   
-  margin-right: 10px; 
-  margin-bottom: 20px;  
-        width: 600px;  
-        height: 420px;  
-        background-color: #f2f2f2; 
-}  
-.product:last-child {  
-  margin-right: 0;  
-}
-p{
-  font-family: "Times New Roman", Times, serif; 
-      font-size: 20px; 
-      font-weight: bold;
-      font-style: italic; 
-      color: rgb(0, 0, 0);
-}
-</style>
 <body>  
     <header>  
         <h1>Courseware</h1>  
     </header>  
-    <div id="shopping">
-      <p>shopping</p>
-      <a href="createpage.html">  
-          <img id="shop"src="11.png" >  
-      </a>
-  </div>  
+    
     <nav>  
         <ul>  
             <li><a href="index.html">Home</a></li>  
             <li><a href="aboutus.html">About Us</a></li>  
             <li><a href="course.html">Courseware</a></li>  
-            <li><a href="zc.html">enquire</a></li>  
+            <li><a href="login.html">enquire</a></li>  
             <li><a href="showcase.html">showcase</a></li>
         </ul>  
     </nav>  
@@ -129,9 +29,9 @@ p{
              is a markup language used to create web pages and other internet applications. 
              It is not a programming language, but consists of a series of tags through 
              which the format of documents on the network can be unified, so that the scattered
-              Internet resources can be connected into a logical whole</p> <br><br>
+              Internet resources can be connected into a logical whole</p> 
               <button class="buttons" onclick="course()">register</button>  
-      </div>  
+      </div>  <br><br><br>
       <div class="product">  
           <h2>JAVA course</h2>  
           <p>Java has a wide range of applications in a variety of fields, such as writing
@@ -144,7 +44,7 @@ p{
              applications that involve large amounts of user data and transactions.</p>  
           
              <button class="buttons" onclick="course()">register</button> 
-      </div>  
+      </div>  <br><br><br>
       <div class="product">  
           <h2>Python course</h2>  
           <p>Python is an interpreted, interactive, object-oriented scripting language. 
@@ -157,7 +57,7 @@ p{
                expand the capabilities and applications of Python.</p> 
          
                <button class="buttons" onclick="course()">register</button>  
-      </div>  
+      </div>  <br><br><br>
       <div class="product">  
           <h2>C++ course</h2>  
           <p>C++ is a widely used programming language, and C++ is an object-oriented programming language
@@ -168,7 +68,7 @@ p{
               as gaming, scientific computing, and embedded systems.</p>  
           
               <button class="buttons" onclick="course()">register</button>   
-      </div>  
+      </div>  <br><br><br>
       <div class="product">  
           <h2>SQL course</h2>  
           <p>SQL, or Structured Query Language, is a language for manipulating databases.
@@ -180,25 +80,6 @@ p{
           
           <button class="buttons" onclick="course()">register</button>  
       </div>  
-   
-    <script>
-      
-    function course() {  
-        window.location.href = 'zc.html'; 
-        // This is a placeholder for your JavaScript code.  
-// You'll need to write functions to handle form validation, shopping cart functionality, etc.  
-    }
-// Example: Function to handle form submission  
-function handleFormSubmission608(event) {  
-    event.preventDefault(); // Prevent the form from submitting normally  
-    // Your code to validate the form and process the data here  
-    console.log('Form submitted!');  
-}  
-  
-// Attach the function to the form's submit event  
-document.querySelector('#registration-form').addEventListener('submit', handleFormSubmission608);
-
-    </script>
      <footer>  
         <div class="footer-links">  
           <a href="tel:+1234567890"><i class="fas fa-phone"></i> +123 456 7890</a>  
