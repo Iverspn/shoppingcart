@@ -1,9 +1,11 @@
-body {  
-    font-family: Arial, sans-serif;  
+body{
+       
+    background: linear-gradient(to bottom, rgb(163, 119, 119), rgb(95, 95, 153));  
+     
     margin: 0;  
-    padding: 20px;  
-   
-}  
+    padding: 0;  
+    align-items: center; 
+    justify-content: center;}
   
 h1 {  
     text-align: center;  
@@ -81,3 +83,105 @@ button:hover {
             background-color: #0056b3;  
         }  
 #pgp{text-align: center; }
+nav ul {  
+    list-style-type: none;  
+    margin: 0;  
+    padding: 0;  
+    overflow: hidden;  
+    background-color: #f3f3f3;  
+}  
+  
+nav li {  
+    float: left;  
+}  
+  
+nav li a {  
+    display: block;  
+    color: #666;  
+    text-align: center;  
+    padding: 14px 16px;  
+    text-decoration: none;  
+}  
+  
+nav li a:hover {  
+    background-color: #ddd;  
+}  
+header {  
+    background-color: #333;  
+    color: #fff;  
+    padding: 10px;  
+    text-align: center;  
+}  
+section {  
+    padding: 20px;  
+}  
+
+/* Add more CSS styles here as needed */
+@keyframes fadeIn {  
+  0% {opacity: 0;}  
+  100% {opacity: 1;}  
+}  
+  
+.animated-image {  
+    
+    width: 1000px;
+    height: 500px;
+  animation-name: fadeIn;  
+  animation-duration: 2s; 
+  animation-fill-mode: forwards;   
+}
+p{
+    font-family: 'Arial', sans-serif; 
+    font-size: 30px;  
+    color: #333;  
+    font-weight: bold;  
+    font-style: italic;  
+    text-align: center; 
+    animation-name: textColorChange;  
+    
+  
+  animation-duration: 2s;  
+    
+    
+  animation-iteration-count: infinite;  
+    
+   
+  animation-direction: alternate;  
+    
+   
+  animation-timing-function: ease-in-out;   
+}
+@keyframes textColorChange {  
+  0% { color: red; }  
+  50% { color: blue; }  
+  100% { color: green; } }
+#shop{
+    width: 50px;
+    height: 50px;
+}
+#shopping{
+    position: absolute;  
+  top: 98px;  
+  right: 10px;  
+}
+@keyframes blink {  
+  0% { opacity: 1; }  
+  50% { opacity: 0; }  
+  100% { opacity: 1; }  
+}  
+  
+.blinking-image {  
+  animation: blink 1s linear infinite;  
+}
+
+.block1{
+    font-size: 30px;
+width: 1200px;
+height: 400px; 
+background-color: rgb(146, 135, 230);   
+color: rgb(1, 1, 1);
+text-align: center; 
+line-height: 100px; 
+position: relative;
+top: 180px; 
+left: 150px;}
