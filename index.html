@@ -7,142 +7,6 @@
     <link rel="stylesheet" href="styles.css">  
     <script src="script.js" defer></script>  
 </head>  
-<style>
-    body{
-       
-    background: linear-gradient(to bottom, rgb(163, 119, 119), rgb(95, 95, 153));  
-     
-    margin: 0;  
-    padding: 0;  
-    align-items: center; 
-    justify-content: center;
-    }
-    footer {  
-    background-color: #333;  
-    color: #fff;  
-    padding: 20px;  
-    text-align: center;  
-    font-size: 14px;  
-  }  
-  footer a {  
-    color: #fff;  
-    text-decoration: none;  
-    margin: 0 5px;  
-  }  
-  footer a:hover {  
-    color: #ccc;  
-  }  
-  .footer-links {  
-    margin-bottom: 10px;  
-  }  
-  .footer-links a {  
-    display: inline-block;  
-    margin: 0 5px;  
-  }  
-  .copyright {  
-    margin-top: 10px;  
-  }  
-    body {  
-    font-family: Arial, sans-serif;  
-    margin: 0;  
-    padding: 0;  
-}  
-  
-header {  
-    background-color: #333;  
-    color: #fff;  
-    padding: 10px;  
-    text-align: center;  
-}  
-  
-nav ul {  
-    list-style-type: none;  
-    margin: 0;  
-    padding: 0;  
-    overflow: hidden;  
-    background-color: #f3f3f3;  
-}  
-  
-nav li {  
-    float: left;  
-}  
-  
-nav li a {  
-    display: block;  
-    color: #666;  
-    text-align: center;  
-    padding: 14px 16px;  
-    text-decoration: none;  
-}  
-  
-nav li a:hover {  
-    background-color: #ddd;  
-}  
-  
-section {  
-    padding: 20px;  
-}  
-img{
-    width: 200px;
-    height: 200px;
-}
-/* Add more CSS styles here as needed */
-@keyframes fadeIn {  
-  0% {opacity: 0;}  
-  100% {opacity: 1;}  
-}  
-  
-.animated-image {  
-    
-    width: 1000px;
-    height: 500px;
-  animation-name: fadeIn;  
-  animation-duration: 2s; 
-  animation-fill-mode: forwards;   
-}
-p{
-    font-family: 'Arial', sans-serif; 
-    font-size: 30px;  
-    color: #333;  
-    font-weight: bold;  
-    font-style: italic;  
-    text-align: center; 
-    animation-name: textColorChange;  
-    
-  
-  animation-duration: 2s;  
-    
-    
-  animation-iteration-count: infinite;  
-    
-   
-  animation-direction: alternate;  
-    
-   
-  animation-timing-function: ease-in-out;   
-}
-@keyframes textColorChange {  
-  0% { color: red; }  
-  50% { color: blue; }  
-  100% { color: green; } }
-#shop{
-    width: 50px;
-    height: 50px;
-}
-#shopping{
-    position: absolute;  
-  top: 98px;  
-  right: 10px;  
-}
-@keyframes blink {  
-  0% { opacity: 1; }  
-  50% { opacity: 0; }  
-  100% { opacity: 1; }  
-}  
-  
-.blinking-image {  
-  animation: blink 1s linear infinite;  
-}
 </style>
 <body>  
     <header>  
@@ -158,12 +22,12 @@ p{
             <li><a href="index.html">Home</a></li>  
             <li><a href="aboutus.html">About Us</a></li>  
             <li><a href="course.html">Courseware</a></li>  
-            <li><a href="zc.html">enquire</a></li>  
+            <li><a href="login.html">enquire</a></li>  
             <li><a href="showcase.html">showcase</a></li>
         </ul>  
     </nav>  
     <div style="text-align: center;"> 
-    <img class="blinking-image" src="logo.jpg" >  <p>Improve IT skills</p></div>
+    <img class="blinking-image" src="logo.jpg" width="100" height="100">  <p>Improve IT skills</p></div>
     <div style="text-align: center;"> 
     <img class="animated-image" src="123.png"><br><br><br>
     <p>Enhance competitiveness in the workplace</p>
@@ -185,21 +49,7 @@ p{
             <!-- Project content here -->  
         </section>  
     </main>  
-    <script>
-        // This is a placeholder for your JavaScript code.  
-// You'll need to write functions to handle form validation, shopping cart functionality, etc.  
-  
-// Example: Function to handle form submission  
-function handleFormSubmission608(event) {  
-    event.preventDefault(); // Prevent the form from submitting normally  
-    // Your code to validate the form and process the data here  
-    console.log('Form submitted!');  
-}  
-  
-// Attach the function to the form's submit event  
-document.querySelector('#registration-form').addEventListener('submit', handleFormSubmission608);
-
-    </script>
+    
     <footer>  
         <div class="footer-links">  
           <a href="tel:+1234567890"><i class="fas fa-phone"></i> +123 456 7890</a>  
