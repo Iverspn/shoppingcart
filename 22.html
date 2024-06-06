@@ -93,7 +93,7 @@ function getCookie(name) {
   
 // 检查用户是否登录的函数  
 function checkUserLogin() {  
-    var authToken = getCookie("passwor"); // 假设cookie名为'auth_token'  
+    var authToken = getCookie("password"); // 假设cookie名为'auth_token'  
     if (!authToken || authToken === '') {  
         // 如果cookie不存在或为空，重定向到登录页面  
         window.location.href = 'login.html';  
