@@ -10,7 +10,7 @@ function createCookies() {
     document.cookie = "password=" + encodeURIComponent(password) + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";  
   
     // Alert the user that the cookies have been created (optional)  
-    alert("Cookies 'username' and 'password' have been created.");  
+    alert("The username and password are created");  
 }
 
 function setLoginCookie() {  
