@@ -103,7 +103,4 @@ function calculateTotalPrice608() {
 // Add an event listener to the 'calculate-total-price-button' to calculate the total price  
 document.getElementById('calculate-total-price-button').addEventListener('click', calculateTotalPrice608);  
   
-// When the window loads, display the cart and its items  
-window.onload = function() {  
-    displayCart608();  
-};
+
