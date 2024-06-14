@@ -4,8 +4,7 @@
 <meta charset="UTF-8">  
 <meta name="viewport" content="width=device-width, initial-scale=1.0">  
 <title>Create Account</title>  
-   <link rel="stylesheet" href="styles.css">  
-<script src="script.js">  </script>  
+   <link rel="stylesheet" href="styles.css">   
 </head>  
 <body>  
     <nav>  
@@ -24,11 +23,17 @@
   <a href="login.html" class="button-link">login page</a>
       </center>
       <br>
-<form onsubmit="createAccount(); return false;">  
-    <input type="text" id="username" placeholder="Username">  
-    <input type="password" id="password" placeholder="Password">  
-    <button type="submit">Create Account</button>  
-</form>  
+ 
+      <div class="container">  
+        <label for="username">Username:</label>  
+        <input type="text" id="username" placeholder="Enter username">  
+        <label for="password">Password:</label>  
+        <input type="password" id="password" placeholder="Enter password">  
+        <button onclick="createCookies()">Create</button>  
+    <br><br>
+        <button onclick="deleteCookies()">Delete Cookies</button>  
+      </div>
+      <script src="script.js"></script>  
   
 </body>  
 <footer>  
