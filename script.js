@@ -1,27 +1,41 @@
 //Iverson(HouYanchao)
 //Iverson(HouYanchao)
 /*create*/
-function setCookie(name, value, days) {  
+function createCookies() {  
+    var username = document.getElementById('username').value;  
+    var password = document.getElementById('password').value;  
+  
+    // Create cookies  
+    document.cookie = "username=" + encodeURIComponent(username) + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";  
+    document.cookie = "password=" + encodeURIComponent(password) + "; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";  
+  
+    // Alert the user that the cookies have been created (optional)  
+    alert("Cookies 'username' and 'password' have been created.");  
+}
+
+function setLoginCookie() {  
+    // Set the cookie with a one-year expiration date  
     var date = new Date();  
-    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));  
+    date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000)); // 1 year  
     var expires = "; expires=" + date.toUTCString();  
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";  
+    document.cookie = "login=yes" + expires + "; path=/";  
 }  
   
-function createAccount() {  
-    var username = document.getElementById("username").value;  
-    var password = document.getElementById("password").value;  
+// Call the function to set the cookie  
+setLoginCookie();
+
+
+function deleteCookies() {  
+    // Deleting the 'username' cookie  
+    document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/";  
   
-   
-    setCookie("username", username, 7);  
-   
-    setCookie("password", password, 7);  
-  var redirectUrl = 'login.html';
-   
-    alert("Account created and credentials saved in cookies.");  
-setTimeout(function() {  
-        window.location.href = redirectUrl;  
-    }, 0); 
+    // Deleting the 'password' cookie  
+    document.cookie = "password=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/";  
+  
+    // Deleting the 'login' cookie  
+    document.cookie = "login=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/";  
+  
+    alert("Cookies 'username', 'password', and 'login' have been deleted.");  
 }
 
 /*22*/
@@ -122,4 +136,3 @@ function handleFormSubmission608(event) {
   
 // Attach the function to the form's submit event  
 document.querySelector('#registration-form').addEventListener('submit', handleFormSubmission608);
-
