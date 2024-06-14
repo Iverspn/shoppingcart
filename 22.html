@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">  
 <title>shopping cart</title>
 <link rel="stylesheet" href="style.css"> 
+
 <nav>  
     <ul>  
         <li><a href="index.html">Home</a></li>  
@@ -12,7 +13,10 @@
         <li><a href="course.html">Courseware</a></li>  
         <li><a href="showcase.html">showcase</a></li>  
     </ul>  
-</nav>   
+</nav>  
+        <center>
+<img src="pgp.png" width="700px" height="500px"></img>
+    </center> 
 </head>  
 <body>  
   <center>
@@ -79,93 +83,13 @@
 
 
 </div>  
+
 <button class="clear" onclick="clearCart608()">clear Cart</button>
 <button id="calculate-total-price-button">Checkout</button>  
 <P id="totalPrice"></P>
-</center>
-    <script>
-function getCookie(name) {  
-    var value = `; ${document.cookie}`;  
-    var parts = value.split(`; ${name}=`);  
-    if (parts.length === 2) return parts.pop().split(';').shift();  
-    return null;  
-}  
-  
-// 检查用户是否登录的函数  
-function checkUserLogin() {  
-    var authToken = getCookie("password"); // 假设cookie名为'auth_token'  
-    if (!authToken || authToken === '') {  
-        // 如果cookie不存在或为空，重定向到登录页面  
-        window.location.href = 'login.html';  
-    } else {  
-        // 如果cookie存在，则显示购物车内容或执行其他操作  
-        // 这里只是简单地显示一条消息，你可以根据需要替换为加载购物车数据等操作  
-        document.getElementById('cartContainer').textContent = 'Welcome to your cart! You are logged in.';  
-        // 你也可以在这里发送请求到服务器以获取购物车数据  
-    }  
-}  
-  
-// 在DOM加载完成后调用检查登录的函数  
-document.addEventListener('DOMContentLoaded', function() {  
-    checkUserLogin();  
-});
+      </center> 
 
-
-        
-        let cart = [];  
-  
-function addToCart608(courseName, price) {  
-    const quantity = document.getElementById(`${courseName}-quantity`).value;  
-    if (quantity > 0) {  
-        cart.push({ name: courseName, price: price, quantity: quantity });  
-        displayCart608();  
-         
-    } else {  
-        alert('error');  
-    }  
-}  
-  
-function displayCart608() {  
-    const cartItemsElement = document.getElementById('cart-items');  
-    cartItemsElement.innerHTML = '';  
-    cart.forEach(item => {  
-        const cartItemElement = document.createElement('div');  
-        cartItemElement.classList.add('cart-item');  
-        cartItemElement.innerHTML = `  
-            <h3>${item.name}</h3>  
-            <p>unit price: ${item.price}</p>  
-            <p>quantity: ${item.quantity}</p>  
-            <p>Price: ${item.price * item.quantity}</p>  
-            <button id="remove" onclick="removeFromCart608('${item.name}')">Remove</button>  
-        `;  
-        cartItemsElement.appendChild(cartItemElement);  
-    });  
-}  
-  
-function removeFromCart608(courseName) {  
-    cart = cart.filter(item => item.name !== courseName);  
-    displayCart608();  
-    calculateTotalPrice608();  
-}  
-function clearCart608() {  
-    cart = [];  
-    displayCart608();   
-    document.getElementById('totalPrice').textContent = '0';  
-}  
-  
-function calculateTotalPrice608() {  
-    let total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);  
-    document.getElementById('totalPrice').textContent = total.toFixed(2);  
-}  
-document.getElementById('calculate-total-price-button').addEventListener('click', calculateTotalPrice608);
-
-  
-
-window.onload = function() {  
-    displayCart608();  
-   
-};
-    </script>
+      <script src="script2.js"></script>  
 <footer>  
     <div class="footer-links">  
       <a href="tel:+1234567890"><i class="fas fa-phone"></i> +123 456 7890</a>  
